@@ -1,0 +1,5 @@
+run = "sh ./scripts/fast-start.sh"
+language = "shell"
+entrypoint = "index.js"
+[nix]
+file = "replit.nix"
