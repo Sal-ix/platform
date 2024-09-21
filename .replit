@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 run = "sh ./scripts/fast-start.sh"
 language = "shell"
 entrypoint = "index.js"
 [nix]
 file = "replit.nix"
+=======
+modules = ["nodejs-20", "bash"]
+
+[nix]
+channel = "stable-24_05"
+>>>>>>> 5456717 (Initial refactoring)

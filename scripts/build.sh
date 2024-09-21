@@ -1,6 +1,14 @@
-cd ./dev/
-# rush build    # Will build all the required packages.
-# rush bundle   # Will prepare bundles.
-rush docker:build   # Will build Docker containers for all applications in the local Docker environment.
-rush docker:up # Will set up all the containers
+#!/bin/bash
 
+# Navigate to the 'dev' directory
+cd ./dev/
+
+# Use Rush to build all required packages and prepare the environment
+rush build
+rush bundle
+rush package
+rush validate
+rush svelte-check  # Optional step for validating Svelte files
+
+# Start the development server
+rushx dev-server
